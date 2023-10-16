@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.12)  2 OCT 2023 11:45
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.12)  12 OCT 2023 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -811,8 +811,14 @@ ing=tex-text;" at 10.95pt
  -> c:/texlive/2022/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-LightItalic.
 otf
  [3] (./CV.aux)
-Package rerunfilecheck Info: File `CV.out' has not changed.
-(rerunfilecheck)             Checksum: C3DD65B81CBC4DC28860F3ADD6B3A451;2109.
+
+Package rerunfilecheck Warning: File `CV.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `CV.out':
+(rerunfilecheck)             Before: C3DD65B81CBC4DC28860F3ADD6B3A451;2109
+(rerunfilecheck)             After:  05F34434B9AF12B9B07C39CC614A0E0D;2247.
  ) 
 Here is how much of TeX's memory you used:
  14630 strings out of 476179
