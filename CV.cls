@@ -3,7 +3,7 @@
 \NeedsTeXFormat{LaTeX2e}
 
 % Set font size and paper type
-\LoadClass[11pt,letterpaper]{article}
+\LoadClass[10pt,letterpaper]{article}
 
 % Enable custom and named colors
 \RequirePackage[usenames,dvipsnames]{color}
