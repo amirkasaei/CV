@@ -60,7 +60,7 @@
 % Define some social accounts and contact information formats
 \newcommand{\linkedin}[1]{
     \href{https://linkedin.com/in/#1}{\textcolor{black}
-    {\faLinkedinIn}\hspace{0.5em}#1}
+    {\faLinkedin}\hspace{0.6em}#1}
 }
 \newcommand{\email}[1]{
     \href{mailto:#1}{\textcolor{black}
@@ -92,6 +92,11 @@
     \textcolor{black}{\faMapMarker*}\hspace{0.5em}#1
 }
 
+\newcommand{\googlescholar}[1]{
+    \hspace{-0.4em} \href{https://scholar.google.com/citations?user=#1}{\textcolor{black}
+    {\faGraduationCap}\hspace{0.3em}Google Scholar}
+}
+
 % Define commands for fullname and job title
 \def \fullname#1{\def\@name{#1}}
 \def \@name {}
@@ -101,10 +106,14 @@
 % Convenience commands
 \newcommand{\italicitem}[1]{\item{\textit{#1}}}
 \newcommand{\bolditem}[1]{\item{\textbf{#1}}}
-\newcommand{\entry}[2]{#1 & #2 \tabularnewline}
+% \newcommand{\entry}[2]{#1 & #2 \tabularnewline}
+
+
+% single-input entry
+\newcommand{\entry}[1]{#1 \tabularnewline}
 
 % Define the resume header
-\newcommand{\resumeheader}[8]{
+\newcommand{\resumeheader}[9]{
     % \phantomsection
     % \addcontentsline{toc}{chapter}{\@name}
     \begin{tabularx}{\textwidth}{Xr}{
@@ -115,15 +124,21 @@
             \fi
        \end{tabular}
     } & {
-        \begin{tabular}[c]{l@{\hspace{1em}}l}
-            \entry{\small#5}{\small#1}
-            \entry{\small#6}{\small#2}
-            \entry{\small#7}{\small#3}
-            \entry{\small#8}{\small#4}
+        \begin{tabular}[c]{@{}l@{}}
+            \entry{\small #1}
+            \entry{\small #2}
+            \entry{\small #3}
+            \entry{\small #4}
+            \entry{\small #5}
+            % \entry{\small #6}
+            % \entry{\small #7}
+            % \entry{\small #8}
+            % \entry{\small #9}
         \end{tabular}
     }
     \end{tabularx}
 }
+
 
 % Renew section command for resume section
 \renewenvironment{section}[1]{
