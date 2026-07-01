@@ -1,5 +1,5 @@
 % Class Identifier and Version
-\ProvidesClass{kyvernitis-resume}[2023/06/06 Kyvernitis class]
+\ProvidesClass{CV}[2023/06/06 Curriculum vitae class]
 \NeedsTeXFormat{LaTeX2e}
 
 % Set font size and paper type
@@ -21,7 +21,7 @@
 \RequirePackage[sfdefault,light]{plex-sans}
 
 % Use hyperref
-\RequirePackage[xetex]{hyperref}
+\RequirePackage{hyperref}
 
 % Use extended columns definitions
 \RequirePackage{array}
@@ -40,10 +40,12 @@
 
 % Remove page numbers
 \pagestyle{empty}
+\emergencystretch=2em
+\hbadness=10000
 
-% Define navy-blue color for later use. Color code is taken from Canva
-\definecolor{navyblue}{RGB}{0, 83, 137}
-\definecolor{links}{RGB}{3, 43, 198}
+% Professional academic navy color palette
+\definecolor{navyblue}{RGB}{39, 73, 119}
+\definecolor{links}{RGB}{39, 73, 119}
 
 % Define new resizable bullet with default 0.7 size for later use
 % Taken from https://tex.stackexchange.com/questions/534192/medium-sized-circle-as-a-bullet
@@ -80,7 +82,7 @@
 }
 \newcommand{\website}[1]{
     \href{https://#1}{\textcolor{black}
-    {\faGlobeAmericas}\hspace{0.5em}#1}
+    {\hspace{-0.16em}\faGlobeAmericas}\hspace{0.5em}#1}
 }
 \newcommand{\phone}[1]{
     \textcolor{black}{\faPhone*}\hspace{0.5em}#1
@@ -113,7 +115,7 @@
 \newcommand{\entry}[1]{#1 \tabularnewline}
 
 % Define the resume header
-\newcommand{\resumeheader}[9]{
+\newcommand{\resumeheader}[5]{
     % \phantomsection
     % \addcontentsline{toc}{chapter}{\@name}
     \begin{tabularx}{\textwidth}{Xr}{
@@ -130,10 +132,6 @@
             \entry{\small #3}
             \entry{\small #4}
             \entry{\small #5}
-            % \entry{\small #6}
-            % \entry{\small #7}
-            % \entry{\small #8}
-            % \entry{\small #9}
         \end{tabular}
     }
     \end{tabularx}
